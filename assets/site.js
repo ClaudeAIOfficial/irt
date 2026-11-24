@@ -66,6 +66,7 @@ const runQ=()=>{const q=$("#q").value.trim().toLowerCase();const hits=q?D.filter
 $("#qres").innerHTML=q?(hits.length?hits.map(s=>`<li><a href="${url(s)}"><time>${esc(s.k)}</time><span>${esc(s.t)}</span></a></li>`).join(""):`<li style="display:block"><span>No stories match that search.</span></li>`):""};
 $("#q").addEventListener("input",runQ);
 $("#nl").addEventListener("submit",ev=>{ev.preventDefault();$("#nlmsg").textContent="Thanks. Signups go live once a mailing provider is connected to this form.";ev.target.reset()});
+const sx=$("#shareX");if(sx){const h1=document.querySelector(".story h1");sx.href="https://x.com/intent/post?text="+encodeURIComponent(h1?h1.textContent:document.title)+"&url="+encodeURIComponent(location.href)+"&via=dailyirtnews"}
 const cp=$("#copyLink");if(cp)cp.onclick=async()=>{try{await navigator.clipboard.writeText(location.href);cp.textContent="Link copied"}catch(err){cp.textContent="Copy the address bar link"}};
 const bar=$("#bar"),mast=document.querySelector(".mast");
 if(mast){const io=new IntersectionObserver(([en])=>bar.classList.toggle("stuck",!en.isIntersecting));io.observe(mast)}

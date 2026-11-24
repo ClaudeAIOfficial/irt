@@ -209,7 +209,10 @@ footer a:hover{color:#fff;text-decoration:underline}
 .byline{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:600 14px Archivo,sans-serif}
 .byline .who{display:flex;align-items:center;gap:10px}
 .byline .who i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font:900 14px Archivo,sans-serif;font-style:normal}
-.share{margin-left:auto}
+.share{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;color:var(--ink)}
+.xfollow{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:#fff;color:#141414;font:800 14px Archivo,sans-serif}
+.xfollow:hover{background:var(--acc);color:#fff;text-decoration:none}
 .chip{min-height:36px;padding:0 14px;border-radius:999px;border:1.5px solid var(--ink);background:none;font:700 13px Archivo,sans-serif;cursor:pointer}
 .chip:hover{background:var(--panel)}
 .hero{margin:22px 0 8px}
